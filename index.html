@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='macroApp'>
+<head>
+   <title>Macro Calculator</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.13/angular.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.13/angular-route.js"></script>
+   <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+   <script src="resources/bootstrap/4.0.0/bootstrap.min.js"></script>
+   <script src="resources/progressBar/progressbar.js"></script>
+   <link href="https://fonts.googleapis.com/css?family=Nunito:400,600" rel="stylesheet">
+   <link rel="stylesheet" href="resources/bootstrap/4.0.0/bootstrap.min.css">
+   <link rel="stylesheet" href="css/main.css">
+   <script src="/main.js"></script> 
+   <script src="/utils.js"></script> 
+   <script>
+     $(document).ready(function(){  
+
+        $("#newFoodBtn").popover(
+          {
+              placement : 'bottom',
+              html : true,
+              delay : {'show': 0},
+              trigger: 'manual',
+              content: '<div id="pop-food-added">Added!</div>'
+          }); 
+
+        // $("#foodDropdown").popover(
+        //  {
+        //      placement : 'bottom',
+        //      html : true,
+        //      // animation: true,
+        //      delay : {'show': 0},
+        //      trigger: 'manual',
+        //      content: '<div id="pop-food-added">Added!</div>'
+        //  });  
+
+    });
+   </script>
+</head>
+<body>
+  <div class="container">
+  <div class="container" align="center">
+<!--   <div id="testImage">
+    <img src="/resources/imgs/testImage.jpg">
+  </div> -->
+    <div ng-view></div>
+  </div>
+</body>
+</html>
